@@ -87,7 +87,7 @@ const Home = () => {
               </div>
               <div className='text-center lg:text-left'>
                 <p className='text-2xl sm:text-4xl font-black text-gray-900'>
-                  <Counter value={1000} duration={1.5} />+
+                  <Counter value={500} duration={1.5} />+
                 </p>
                 <p className='text-xs sm:text-sm font-semibold text-gray-500 mt-1 uppercase tracking-wider'>Happy Students</p>
               </div>
