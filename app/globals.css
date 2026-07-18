@@ -162,6 +162,61 @@ img {
   }
 }
 
+/* Marquee Scrolling Animation for Testimonials */
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll-right {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.marquee-row {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+}
+
+.marquee-content {
+  flex-shrink: 0;
+  display: flex;
+  gap: 1.25rem;
+  animation: scroll-left 80s linear infinite;
+}
+
+.marquee-reverse .marquee-content {
+  animation-name: scroll-right;
+  animation-duration: 90s;
+}
+
+.marquee-row:hover .marquee-content {
+  animation-play-state: paused;
+}
+
 /* Fixed Component Styles (WhatsApp Button) */
 .fixed-component {
   position: fixed;

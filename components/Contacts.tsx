@@ -25,7 +25,7 @@ const Contact = () => {
             />
             <a 
               href={`mailto:${email}`} 
-              className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 bg-yellow-400 hover:bg-yellow-500 rounded-full text-sm sm:text-base font-bold text-black cursor-pointer transition-all duration-300 hover:shadow-lg no-underline flex items-center justify-center hover:-translate-y-0.5"
+              className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 bg-yellow-400 hover:bg-yellow-300 rounded-full text-sm sm:text-base font-bold text-black cursor-pointer transition-all duration-300 hover:shadow-lg no-underline flex items-center justify-center hover:-translate-y-0.5"
             >
               Submit →
             </a>

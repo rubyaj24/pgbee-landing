@@ -41,11 +41,11 @@ const Navbar = () => {
           <Image src="/logo.png" alt="PgBee Logo" width={120} height={32} className="w-16 h-8 sm:w-22 sm:h-6" priority />
         </a>
         <div className="hidden lg:flex items-center gap-8 xl:gap-10">
-          <a href="/#about" className="text-gray-700 font-medium text-sm xl:text-base hover:text-yellow-500 transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-yellow-500 after:transition-all after:duration-300">About</a>
-          <a href="/#work" className="text-gray-700 font-medium text-sm xl:text-base hover:text-yellow-500 transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-yellow-500 after:transition-all after:duration-300">How it Works</a>
-          <a href="/#contact" className="text-gray-700 font-medium text-sm xl:text-base hover:text-yellow-500 transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-yellow-500 after:transition-all after:duration-300">Contact</a>
+          <a href="/#about" className="text-gray-700 font-medium text-sm xl:text-base hover:text-yellow-300 transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-yellow-300 after:transition-all after:duration-300">About</a>
+          <a href="/#work" className="text-gray-700 font-medium text-sm xl:text-base hover:text-yellow-300 transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-yellow-300 after:transition-all after:duration-300">How it Works</a>
+          <a href="/#contact" className="text-gray-700 font-medium text-sm xl:text-base hover:text-yellow-300 transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-yellow-300 after:transition-all after:duration-300">Contact</a>
           <a href="https://app.pgbee.in" target="_blank" rel="noopener noreferrer">
-            <button className="px-6 xl:px-8 py-2.5 xl:py-3 bg-yellow-400 hover:bg-yellow-500 text-black font-bold text-sm xl:text-base rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5">Get Started</button>
+            <button className="px-6 xl:px-8 py-2.5 xl:py-3 bg-yellow-300 hover:bg-yellow-300 text-black font-bold text-sm xl:text-base rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5">Get Started</button>
           </a>
         </div>
         <div className="flex lg:hidden items-center justify-center z-50">

@@ -19,7 +19,7 @@ const Home = () => {
             <div className='space-y-4 sm:space-y-6'>
               <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-extrabold text-gray-900 leading-[1.1] sm:leading-tight'>
                 Your Perfect Stay,
-                <span className='block text-yellow-500 mt-2'>Just a Click Away!</span>
+                <span className='block text-yellow-300 mt-2'>Just a Click Away!</span>
               </h1>
               <p className='text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed max-w-2xl'>
                 Find the best PGs, hostels and rooms nearby with verified listings and instant booking
@@ -28,7 +28,7 @@ const Home = () => {
 
             <div className='flex flex-col sm:flex-row gap-3 sm:gap-4'>
               <button 
-                className='w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 bg-yellow-400 hover:bg-yellow-500 text-black font-bold text-base sm:text-lg rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1'
+                className='w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 bg-yellow-400 hover:bg-yellow-300 text-black font-bold text-base sm:text-lg rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1'
                 onClick={() => window.location.href = "https://app.pgbee.in"}
               >
                 Search Now →
