@@ -1,5 +1,22 @@
 @import "tailwindcss";
 
+@theme {
+  --color-yellow-50: #fffef0;
+  --color-yellow-100: #fff9cc;
+  --color-yellow-200: #fff399;
+  --color-yellow-300: #ffed66;
+  --color-yellow-400: #ffe536; /* Brand Logo Yellow */
+  --color-yellow-500: #e6cb1c;
+  --color-yellow-600: #bfa50e;
+  --color-yellow-700: #998205;
+  --color-yellow-800: #736100;
+  --color-yellow-900: #4d4100;
+  --color-yellow-950: #262100;
+
+  --color-primary: #ffe536;
+}
+
+
 /* Global Reset & Base Styles */
 * {
   box-sizing: border-box;

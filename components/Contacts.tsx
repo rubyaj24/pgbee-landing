@@ -1,12 +1,13 @@
 'use client'
 
 import React from "react"
+import AnimatedButton from "./AnimatedButton"
 
 const Contact = () => {
   const email = 'pgbee.company@gmail.com'
 
   return (
-    <section className="py-16 sm:py-20 lg:py-28 w-full">
+    <section className="py-16 sm:py-20 lg:py-28 w-full bg-[#fafafa] relative z-10">
       <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 sm:mb-12">
           <span className="inline-block px-4 py-2 bg-yellow-100 text-yellow-600 rounded-full font-semibold text-xs sm:text-sm mb-3 sm:mb-4">Get In Touch</span>
@@ -23,12 +24,11 @@ const Contact = () => {
               placeholder="yourmail@gmail.com"
               className="w-full sm:flex-1 h-12 sm:h-14 border border-gray-200 outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-100 rounded-full px-5 sm:px-6 text-sm sm:text-base text-gray-700 transition-all duration-200"
             />
-            <a 
-              href={`mailto:${email}`} 
-              className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 bg-yellow-400 hover:bg-yellow-300 rounded-full text-sm sm:text-base font-bold text-black cursor-pointer transition-all duration-300 hover:shadow-lg no-underline flex items-center justify-center hover:-translate-y-0.5"
-            >
-              Submit →
-            </a>
+            <AnimatedButton
+              text="Submit"
+              href={`mailto:${email}`}
+              className="w-full sm:w-auto px-8 sm:px-10 py-3.5 sm:py-4 bg-yellow-400 hover:bg-yellow-300 rounded-full text-sm sm:text-base font-bold text-black cursor-pointer transition-all duration-300 hover:shadow-lg no-underline flex items-center justify-center"
+            />
           </div>
         </div>
         
