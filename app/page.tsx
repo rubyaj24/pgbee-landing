@@ -8,7 +8,7 @@ import PlayStore from '@/components/PlayStore'
 import Contacts from '@/components/Contacts'
 import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
-import BeeSupport from '@/components/BeeSupport'
+// import BeeSupport from '@/components/BeeSupport'
 
 export default function Page() {
   return (
@@ -21,7 +21,6 @@ export default function Page() {
         <PlayStore />
         <div id='contact'><Contacts /></div>
         <Footer />
-        <BeeSupport />
     </div>
   )
 }   
