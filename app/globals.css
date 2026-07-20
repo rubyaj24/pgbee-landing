@@ -220,8 +220,14 @@ img {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background-image: linear-gradient(rgb(17 24 39 / 0.08) 1px, transparent 1px), linear-gradient(90deg, rgb(17 24 39 / 0.08) 1px, transparent 1px);
-  background-size: 64px 64px;
+  background-image:
+    linear-gradient(30deg, rgb(17 24 39 / 0.08) 12%, transparent 12.5%, transparent 87%, rgb(17 24 39 / 0.08) 87.5%, rgb(17 24 39 / 0.08)),
+    linear-gradient(150deg, rgb(17 24 39 / 0.08) 12%, transparent 12.5%, transparent 87%, rgb(17 24 39 / 0.08) 87.5%, rgb(17 24 39 / 0.08)),
+    linear-gradient(30deg, rgb(17 24 39 / 0.08) 12%, transparent 12.5%, transparent 87%, rgb(17 24 39 / 0.08) 87.5%, rgb(17 24 39 / 0.08)),
+    linear-gradient(150deg, rgb(17 24 39 / 0.08) 12%, transparent 12.5%, transparent 87%, rgb(17 24 39 / 0.08) 87.5%, rgb(17 24 39 / 0.08)),
+    linear-gradient(60deg, rgb(17 24 39 / 0.08) 25%, transparent 25.5%, transparent 75%, rgb(17 24 39 / 0.08) 75%);
+  background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0;
+  background-size: 80px 140px;
   content: '';
   mask-image: linear-gradient(to bottom, black, transparent 90%);
 }
@@ -233,9 +239,8 @@ img {
   z-index: -1;
   width: 32rem;
   height: 32rem;
-  border: 1px solid rgb(17 24 39 / 0.16);
-  border-radius: 9999px;
-  box-shadow: 0 0 0 3rem rgb(17 24 39 / 0.025), 0 0 0 6rem rgb(17 24 39 / 0.025);
+  background: rgb(255 255 255 / 0.08);
+  clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0 50%);
   content: '';
 }
 
@@ -262,7 +267,7 @@ img {
 .ticket-owner::before {
   position: absolute;
   top: 50%;
-  left: 60%;
+  left: 0;
   z-index: 2;
   width: 2rem;
   height: 2rem;
@@ -276,7 +281,7 @@ img {
   position: absolute;
   top: 10%;
   bottom: 10%;
-  left: 60%;
+  left: 0;
   z-index: 1;
   border-left: 1px dashed rgb(17 24 39 / 0.2);
   content: '';

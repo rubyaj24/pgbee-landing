@@ -81,11 +81,7 @@ const Navbar = () => {
             text="Find a Stay"
             href="https://app.pgbee.in"
             target="_blank"
-            className={`px-6 xl:px-8 py-2.5 xl:py-3 font-bold text-sm xl:text-base rounded-full shadow-md hover:shadow-lg transition-all duration-300 ${
-              isScrolled
-                ? 'bg-yellow-400 hover:bg-yellow-300 text-black'
-                : 'bg-white hover:bg-gray-100 text-gray-900'
-            }`}
+            className="px-6 xl:px-8 py-2.5 xl:py-3 bg-white hover:bg-gray-100 text-gray-900 font-bold text-sm xl:text-base rounded-full shadow-none transition-colors duration-300"
           />
         </div>
         <div className="flex lg:hidden items-center justify-center z-50">
@@ -113,7 +109,7 @@ const Navbar = () => {
                 text="Find a Stay"
                 href="https://app.pgbee.in"
                 target="_blank"
-                className="w-full py-4 bg-yellow-400 hover:bg-yellow-300 text-black font-bold text-lg rounded-xl shadow-md transition-all duration-300"
+                className="w-full py-4 bg-white hover:bg-gray-100 text-black font-bold text-lg rounded-xl shadow-none transition-colors duration-300"
               />
             </ListItem>
             <ListItem disablePadding sx={{ mt: 2, display: 'block' }}>

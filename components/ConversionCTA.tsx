@@ -15,7 +15,7 @@ const ConversionCTA = () => (
             text="Find a Stay"
             href="https://app.pgbee.in"
             target="_blank"
-            className="w-full rounded-full bg-yellow-400 px-7 py-3.5 font-bold text-gray-900 hover:bg-yellow-300 sm:w-auto"
+            className="w-full rounded-full bg-white px-7 py-3.5 font-bold text-gray-900 border border-white/30 hover:bg-yellow-300 sm:w-auto"
           />
           <AnimatedButton
             text="List Your Property"

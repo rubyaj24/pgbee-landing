@@ -35,7 +35,7 @@ const Home = () => {
               <AnimatedButton
                 text="Find a Stay"
                 href="https://app.pgbee.in"
-                className="w-full sm:w-auto sm:min-w-[170px] px-7 sm:px-8 py-3.5 sm:py-4 bg-yellow-400 hover:bg-yellow-300 text-black font-bold text-base sm:text-lg rounded-full shadow-lg cursor-pointer"
+                className="w-full sm:w-auto sm:min-w-[170px] px-7 sm:px-8 py-3.5 sm:py-4 bg-white hover:bg-gray-100 text-black font-bold text-base sm:text-lg rounded-full shadow-none cursor-pointer"
                 icon={
                   <svg className="w-6 h-6 text-black" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
@@ -94,10 +94,10 @@ const Home = () => {
             <div className='relative w-full max-w-[320px] sm:max-w-[380px] md:max-w-[420px] lg:max-w-[450px] xl:max-w-[500px]'>
               {/* Quiet background shapes keep the focus on the product image. */}
               <div
-                className='hidden sm:block absolute -top-4 -right-4 w-48 h-48 sm:w-64 sm:h-64 lg:w-72 lg:h-72 bg-yellow-200 rounded-full opacity-20 blur-3xl'
+                className='hidden sm:block absolute -top-4 -right-4 w-48 h-48 sm:w-64 sm:h-64 lg:w-72 lg:h-72 bg-yellow-200 opacity-20 blur-3xl [clip-path:polygon(25%_6.7%,75%_6.7%,100%_50%,75%_93.3%,25%_93.3%,0_50%)]'
               />
               <div
-                className='hidden sm:block absolute -bottom-4 -left-4 w-40 h-40 sm:w-56 sm:h-56 lg:w-64 lg:h-64 bg-yellow-300 rounded-full opacity-20 blur-3xl'
+                className='hidden sm:block absolute -bottom-4 -left-4 w-40 h-40 sm:w-56 sm:h-56 lg:w-64 lg:h-64 bg-yellow-300 opacity-20 blur-3xl [clip-path:polygon(25%_6.7%,75%_6.7%,100%_50%,75%_93.3%,25%_93.3%,0_50%)]'
               />
               
                 <div
