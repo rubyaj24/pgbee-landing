@@ -17,10 +17,10 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="space-y-6">
             <Link href="/" className="w-[120px] block cursor-pointer">
-              <Image src="/PgBee.svg" alt="PgBee Logo" width={120} height={55} />
+              <Image src="/PgBee.svg" alt="PgBee Logo" width={120} height={55} className="w-[120px] h-auto" />
             </Link>
             <p className="text-gray-600 text-sm leading-relaxed max-w-xs">
-              Find your perfect stay with verified PGs, hostels, and rooms. Trusted by thousands of students.
+              Find your perfect stay with verified PGs, hostels, and rooms near your college.
             </p>
             <div className="flex gap-4">
               <motion.a 
@@ -28,8 +28,7 @@ const Footer = () => {
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-gray-600 hover:text-white hover:bg-yellow-400 transition-colors duration-300"
-                whileHover={{ y: -4, scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
+                whileTap={{ opacity: 0.7 }}
               >
                 <BsTwitter size={18} />
               </motion.a>
@@ -38,8 +37,7 @@ const Footer = () => {
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-gray-600 hover:text-white hover:bg-yellow-400 transition-colors duration-300"
-                whileHover={{ y: -4, scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
+                whileTap={{ opacity: 0.7 }}
               >
                 <SiLinkedin size={18} />
               </motion.a>
@@ -48,8 +46,7 @@ const Footer = () => {
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-gray-600 hover:text-white hover:bg-yellow-400 transition-colors duration-300"
-                whileHover={{ y: -4, scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
+                whileTap={{ opacity: 0.7 }}
               >
                 <FaFacebookF size={18} />
               </motion.a>
@@ -58,8 +55,7 @@ const Footer = () => {
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-gray-600 hover:text-white hover:bg-yellow-400 transition-colors duration-300"
-                whileHover={{ y: -4, scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
+                whileTap={{ opacity: 0.7 }}
               >
                 <FaInstagram size={18} />
               </motion.a>
@@ -73,6 +69,7 @@ const Footer = () => {
               <Link href="/#about" className="block text-gray-600 hover:text-yellow-500 hover:translate-x-1 transition-all duration-200">About Us</Link>
               <Link href="/#work" className="block text-gray-600 hover:text-yellow-500 hover:translate-x-1 transition-all duration-200">How it Works</Link>
               <Link href="/#contact" className="block text-gray-600 hover:text-yellow-500 hover:translate-x-1 transition-all duration-200">Contact</Link>
+              <Link href="/#faq" className="block text-gray-600 hover:text-yellow-500 hover:translate-x-1 transition-all duration-200">FAQs</Link>
               <a href="https://app.pgbee.in" target="_blank" rel="noopener noreferrer" className="block text-gray-600 hover:text-yellow-500 hover:translate-x-1 transition-all duration-200">Search Properties</a>
             </div>
           </div>
@@ -81,9 +78,9 @@ const Footer = () => {
           <div>
             <h3 className="font-bold text-gray-800 text-lg mb-5">Legal</h3>
             <div className="space-y-3">
-              <a href="/Terms and Conditions.pdf" target="_blank" rel="noopener noreferrer" className="block text-gray-600 hover:text-yellow-500 hover:translate-x-1 transition-all duration-200">Terms & Conditions</a>
-              <Link href="/privacy" className="block text-gray-600 hover:text-yellow-500 hover:translate-x-1 transition-all duration-200">Privacy Policy</Link>
-              <a href="/Refund Policy.pdf" target="_blank" rel="noopener noreferrer" className="block text-gray-600 hover:text-yellow-500 hover:translate-x-1 transition-all duration-200">Refund Policy</a>
+              <Link href="/terms" className="block text-gray-600 hover:text-yellow-500 transition-colors duration-200">Terms & Conditions</Link>
+              <Link href="/privacy" className="block text-gray-600 hover:text-yellow-500 transition-colors duration-200">Privacy Policy</Link>
+              <Link href="/refund-policy" className="block text-gray-600 hover:text-yellow-500 transition-colors duration-200">Refund Policy</Link>
             </div>
           </div>
 
@@ -92,6 +89,7 @@ const Footer = () => {
             <h3 className="font-bold text-gray-800 text-lg mb-5">Get in Touch</h3>
             <div className="space-y-3 text-gray-600 text-sm">
               <p>Have questions? We&apos;re here to help!</p>
+              <a href="mailto:pgbee.company@gmail.com" className="block hover:text-yellow-500 transition-colors">pgbee.company@gmail.com</a>
               <AnimatedButton
                 text="Contact Us"
                 href="/#contact"

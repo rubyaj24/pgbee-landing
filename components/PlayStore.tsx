@@ -36,7 +36,7 @@ const PlayStore = () => {
   const beeX = useTransform(smoothProgress, [0, 1], [-20, 60])
 
   return (
-    <section ref={sectionRef} className="relative w-full overflow-hidden">
+    <section ref={sectionRef} style={{ position: 'relative' }} className="w-full overflow-hidden">
       {/* Top curve */}
       <div className="relative -mb-1 z-10">
         <svg
@@ -97,7 +97,7 @@ const PlayStore = () => {
               </h2>
 
               <p className="text-base sm:text-lg text-gray-800/80 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                Download the PGBee app now and find verified PGs, hostels, and rooms near your college — all in one place.
+                Download the PgBee app now and find verified PGs, hostels, and rooms near your college — all in one place.
               </p>
 
               <div className="pt-2">
@@ -105,9 +105,8 @@ const PlayStore = () => {
                   href="https://play.google.com/store/apps/details?id=in.pgbee.student"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 bg-gray-900 hover:bg-gray-800 text-white px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl sm:rounded-2xl transition-all duration-300 shadow-md hover:shadow-xl group"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  className="inline-flex items-center gap-3 bg-gray-900 hover:bg-gray-800 text-white px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl sm:rounded-2xl transition-colors duration-300 shadow-md group"
+                  whileTap={{ opacity: 0.82 }}
                 >
                   <svg className="w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0" viewBox="0 0 24 24" fill="white">
                     <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zM14.499 12.693l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 010 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z" />

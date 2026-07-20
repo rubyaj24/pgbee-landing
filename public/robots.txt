@@ -8,4 +8,4 @@ Disallow: /private/
 
 Allow: /
 
-Sitemap: https://pgbee.in/sitemap.xml
+Sitemap: https://www.pgbee.in/sitemap.xml

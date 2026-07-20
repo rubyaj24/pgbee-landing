@@ -29,9 +29,23 @@ html {
 }
 
 body {
-  background-color: #fafafa;
+  background-color: #f7f7f3;
   max-width: 100%;
   overflow-x: hidden;
+}
+
+::selection {
+  background: #ffe536;
+  color: #111827;
+}
+
+h1,
+h2,
+h3,
+h4,
+.heading-font {
+  font-family: var(--font-unbounded), "Red Hat Display", sans-serif;
+  letter-spacing: -0.025em;
 }
 
 img {
@@ -179,6 +193,137 @@ img {
   }
 }
 
+/* Shared landing-page visual language */
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  border: 1px solid rgb(17 24 39 / 0.14);
+  background: rgb(255 255 255 / 0.55);
+  color: #4d4100;
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 700;
+}
+
+.hero-shell {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: min(760px, calc(100vh - 4rem));
+  border-radius: 0 0 2.5rem 2.5rem;
+  background: #ffe536;
+}
+
+.hero-shell::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: linear-gradient(rgb(17 24 39 / 0.08) 1px, transparent 1px), linear-gradient(90deg, rgb(17 24 39 / 0.08) 1px, transparent 1px);
+  background-size: 64px 64px;
+  content: '';
+  mask-image: linear-gradient(to bottom, black, transparent 90%);
+}
+
+.hero-shell::after {
+  position: absolute;
+  top: 12%;
+  right: 8%;
+  z-index: -1;
+  width: 32rem;
+  height: 32rem;
+  border: 1px solid rgb(17 24 39 / 0.16);
+  border-radius: 9999px;
+  box-shadow: 0 0 0 3rem rgb(17 24 39 / 0.025), 0 0 0 6rem rgb(17 24 39 / 0.025);
+  content: '';
+}
+
+.display-title {
+  font-size: clamp(2.75rem, 7vw, 6.75rem);
+  font-weight: 800;
+  letter-spacing: -0.07em;
+  line-height: 0.98;
+}
+
+.editorial-rule {
+  height: 1px;
+  background: rgb(17 24 39 / 0.2);
+}
+
+.ticket-cta {
+  position: relative;
+}
+
+.ticket-owner {
+  position: relative;
+}
+
+.ticket-owner::before {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  z-index: 2;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  background: #f7f7f3;
+  content: '';
+  transform: translate(-50%, -50%);
+}
+
+.ticket-owner::after {
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  left: 60%;
+  z-index: 1;
+  border-left: 1px dashed rgb(17 24 39 / 0.2);
+  content: '';
+}
+
+@media (max-width: 1023px) {
+  .ticket-owner::before {
+    top: 0;
+    left: 50%;
+  }
+
+  .ticket-owner::after {
+    top: 0;
+    right: 10%;
+    bottom: auto;
+    left: 10%;
+    border-top: 1px dashed rgb(17 24 39 / 0.2);
+    border-left: 0;
+  }
+}
+
+.section-title {
+  color: #1f2937;
+  font-size: clamp(1.5rem, 3vw, 3rem);
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.section-description {
+  color: #4b5563;
+  font-size: clamp(0.875rem, 1.5vw, 1.125rem);
+  line-height: 1.625;
+}
+
+.surface-card {
+  border: 1px solid #f3f4f6;
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 1px 0 rgb(17 24 39 / 0.08);
+  transition: box-shadow 300ms ease, border-color 300ms ease;
+}
+
+.surface-card:hover {
+  border-color: rgb(17 24 39 / 0.18);
+  box-shadow: 0 10px 24px -12px rgb(17 24 39 / 0.24);
+}
+
 /* Marquee Scrolling Animation for Testimonials */
 @keyframes scroll-left {
   from {
@@ -232,6 +377,17 @@ img {
 
 .marquee-row:hover .marquee-content {
   animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 /* Fixed Component Styles (WhatsApp Button) */

@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion } from "framer-motion"
 
 interface AnimatedButtonProps {
   text: string
@@ -70,34 +70,23 @@ const AnimatedButton: React.FC<AnimatedButtonProps> = ({
     <motion.button
       onClick={handleClick}
       className={`relative overflow-hidden flex items-center justify-center cursor-pointer ${className}`}
-      whileHover={{ scale: 1.03, y: -2 }}
-      whileTap={{ scale: 0.97 }}
-      transition={{ type: "spring", stiffness: 400, damping: 15 }}
+      whileTap={{ opacity: 0.82 }}
     >
-      <AnimatePresence mode="wait">
-        {!clicked ? (
-          <motion.span
-            key="text"
-            className="flex items-center justify-center gap-2 w-full h-full"
-            initial={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -60, filter: "blur(2px)" }}
-            transition={{ duration: 0.25, ease: "easeInOut" }}
-          >
-            {text}
-          </motion.span>
-        ) : (
-          <motion.span
-            key="icon"
-            className="flex items-center justify-center w-full h-full absolute inset-0"
-            initial={{ opacity: 0, x: 60, filter: "blur(2px)" }}
-            animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
-            exit={{ opacity: 0, x: -60, filter: "blur(2px)" }}
-            transition={{ duration: 0.25, ease: "easeInOut" }}
-          >
-            {defaultIcon}
-          </motion.span>
-        )}
-      </AnimatePresence>
+      {/* Keep the label in normal flow so the button never changes size. */}
+      <motion.span
+        className="flex items-center justify-center gap-2 w-full h-full transition-opacity duration-200"
+        animate={{ opacity: clicked ? 0 : 1 }}
+      >
+        {text}
+      </motion.span>
+      <motion.span
+        className="pointer-events-none absolute inset-0 flex items-center justify-center"
+        initial={false}
+        animate={{ opacity: clicked ? 1 : 0, scale: clicked ? 1 : 0.8 }}
+        transition={{ duration: 0.2, ease: "easeOut" }}
+      >
+        {defaultIcon}
+      </motion.span>
     </motion.button>
   )
 }
