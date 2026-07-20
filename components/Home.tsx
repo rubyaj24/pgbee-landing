@@ -44,7 +44,7 @@ const Home = () => {
               />
               <AnimatedButton
                 text="List Your Property"
-                href="https://owner.pgbee.in"
+                href="https://owners.pgbee.in"
                 target="_blank"
                 className="w-full sm:w-auto sm:min-w-[190px] px-7 sm:px-8 py-3.5 sm:py-4 border border-gray-900/35 bg-transparent hover:bg-gray-900 hover:text-white text-gray-900 font-bold text-base sm:text-lg rounded-full cursor-pointer transition-opacity"
               />

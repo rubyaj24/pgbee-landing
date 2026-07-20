@@ -119,7 +119,7 @@ const Navbar = () => {
             <ListItem disablePadding sx={{ mt: 2, display: 'block' }}>
               <AnimatedButton
                 text="List Your Property"
-                href="https://owner.pgbee.in"
+                href="https://owners.pgbee.in"
                 target="_blank"
                 className="w-full py-4 bg-gray-900 hover:bg-gray-800 text-white font-bold text-lg rounded-xl shadow-md transition-all duration-300"
               />

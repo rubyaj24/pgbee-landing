@@ -19,7 +19,7 @@ const ConversionCTA = () => (
           />
           <AnimatedButton
             text="List Your Property"
-            href="https://owner.pgbee.in"
+            href="https://owners.pgbee.in"
             target="_blank"
             className="w-full rounded-full border border-white/30 bg-transparent px-7 py-3.5 font-bold text-white hover:bg-white/10 sm:w-auto"
           />
