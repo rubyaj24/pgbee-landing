@@ -48,14 +48,6 @@ const Home = () => {
                 target="_blank"
                 className="w-full sm:w-auto sm:min-w-[190px] px-7 sm:px-8 py-3.5 sm:py-4 border border-gray-900/35 bg-transparent hover:bg-gray-900 hover:text-white text-gray-900 font-bold text-base sm:text-lg rounded-full cursor-pointer transition-opacity"
               />
-              <motion.button 
-                className='inline-flex w-full items-center justify-center gap-2 px-2 py-3.5 font-bold text-base text-gray-900 underline decoration-gray-900/30 underline-offset-8 transition-colors hover:decoration-gray-900 sm:w-auto sm:justify-start'
-                onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-                whileTap={{ opacity: 0.82 }}
-              >
-                Learn More
-                <span aria-hidden="true">→</span>
-              </motion.button>
             </div>
 
             <div className='flex flex-wrap items-center gap-x-4 gap-y-2 text-[10px] sm:text-xs font-bold tracking-[0.18em] text-gray-900/55 uppercase'>

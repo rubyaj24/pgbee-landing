@@ -85,12 +85,12 @@ const PlayStore = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <div className="inline-flex items-center gap-2 bg-yellow-300/40 rounded-full px-4 py-1.5">
+              {/* <div className="inline-flex items-center gap-2 bg-yellow-300/40 rounded-full px-4 py-1.5">
                 <svg className="w-5 h-5 text-gray-900" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 010 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z" />
                 </svg>
                 <span className="text-sm font-semibold text-gray-900">Now Available</span>
-              </div>
+              </div> */}
 
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
                 We are on<br className="sm:hidden" /> Google Play Store

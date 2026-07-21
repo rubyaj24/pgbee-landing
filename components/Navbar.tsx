@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react"
 import Image from 'next/image'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import HamburgerIcon from "./HamburgerIcon"
 import Box from "@mui/material/Box"
 import Drawer from "@mui/material/Drawer"
@@ -20,6 +20,7 @@ import AnimatedButton from "./AnimatedButton"
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [hoveredNavItem, setHoveredNavItem] = useState<string | null>(null)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,7 +58,7 @@ const Navbar = () => {
           ? "bg-white/95 backdrop-blur-md shadow-sm py-2"
           : "bg-yellow-400 py-4"
       }`}
-      initial={{ y: -50, opacity: 0 }}
+      initial={{ y: -20, opacity: 1 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
@@ -73,15 +74,56 @@ const Navbar = () => {
             priority
           />
         </Link>
-        <div className="hidden lg:flex items-center gap-8 xl:gap-10">
-          <Link href="/#about" className="text-gray-700 font-semibold text-sm xl:text-base hover:text-yellow-400 transition-colors duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-yellow-400 after:transition-all after:duration-300">About</Link>
-          <Link href="/#work" className="text-gray-700 font-semibold text-sm xl:text-base hover:text-yellow-400 transition-colors duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-yellow-400 after:transition-all after:duration-300">How it Works</Link>
-          <Link href="/#contact" className="text-gray-700 font-semibold text-sm xl:text-base hover:text-yellow-400 transition-colors duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-yellow-400 after:transition-all after:duration-300">Contact</Link>
+        <div
+          className="hidden lg:flex items-center gap-2 xl:gap-4 relative"
+          onMouseLeave={() => setHoveredNavItem(null)}
+        >
+          {[
+            { label: 'About', href: '/#about' },
+            { label: 'How it Works', href: '/#work' },
+            { label: 'Contact', href: '/#contact' },
+          ].map((item) => (
+            <Link
+              key={item.label}
+              href={item.href}
+              onMouseEnter={() => setHoveredNavItem(item.label)}
+              onFocus={() => setHoveredNavItem(item.label)}
+              className="relative z-10 rounded-full px-4 py-2 text-gray-700 font-semibold text-sm xl:text-base transition-colors duration-200 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-900/30"
+            >
+              <AnimatePresence initial={false}>
+                {hoveredNavItem === item.label && (
+                  <motion.span
+                    layoutId="navbar-hover-pill"
+                    className="absolute inset-0 -z-10 rounded-full bg-white shadow-sm"
+                    initial={{ scaleX: 0.88, scaleY: 0.92, opacity: 0 }}
+                    animate={{
+                      scaleX: [0.92, 1.08, 0.98, 1],
+                      scaleY: [0.94, 0.98, 1.04, 1],
+                      opacity: 1,
+                    }}
+                    exit={{ scaleX: 0.88, scaleY: 0.92, opacity: 0 }}
+                    transition={{
+                      layout: { type: 'spring', stiffness: 260, damping: 17, mass: 0.6 },
+                      scaleX: { duration: 0.42, ease: [0.22, 1, 0.36, 1] },
+                      scaleY: { duration: 0.42, ease: [0.22, 1, 0.36, 1] },
+                      opacity: { duration: 0.35, ease: 'easeInOut' },
+                    }}
+                    aria-hidden="true"
+                  />
+                )}
+              </AnimatePresence>
+              {item.label}
+            </Link>
+          ))}
           <AnimatedButton
             text="Find a Stay"
             href="https://app.pgbee.in"
             target="_blank"
-            className="px-6 xl:px-8 py-2.5 xl:py-3 bg-white hover:bg-gray-100 text-gray-900 font-bold text-sm xl:text-base rounded-full shadow-none transition-colors duration-300"
+            className={`px-6 xl:px-8 py-2.5 xl:py-3 ${
+              isScrolled
+                ? 'bg-yellow-400 hover:bg-yellow-500'
+                : 'bg-white hover:bg-gray-100'
+            } text-gray-900 font-bold text-sm xl:text-base rounded-full shadow-none transition-colors duration-300`}
           />
         </div>
         <div className="flex lg:hidden items-center justify-center z-50">
