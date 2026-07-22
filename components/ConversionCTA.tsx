@@ -1,19 +1,31 @@
 'use client'
 
-import React, { useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import AnimatedButton from './AnimatedButton'
 
 const ConversionCTA = () => {
   const sectionRef = useRef<HTMLElement>(null)
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(max-width: 1023px)')
+    const updateViewport = () => setIsMobile(mediaQuery.matches)
+    updateViewport()
+    mediaQuery.addEventListener('change', updateViewport)
+    return () => mediaQuery.removeEventListener('change', updateViewport)
+  }, [])
+
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ['start end', 'end start'],
   })
-  const leftX = useTransform(scrollYProgress, [0.35, 0.78], [0, -150])
-  const rightX = useTransform(scrollYProgress, [0.35, 0.78], [0, 150])
-  const leftRotate = useTransform(scrollYProgress, [0.35, 0.78], [0, -4])
-  const rightRotate = useTransform(scrollYProgress, [0.35, 0.78], [0, 4])
+  const leftX = useTransform(scrollYProgress, [0.35, 0.78], [0, isMobile ? 0 : -150])
+  const rightX = useTransform(scrollYProgress, [0.35, 0.78], [0, isMobile ? 0 : 150])
+  const leftY = useTransform(scrollYProgress, [0.35, 0.78], [0, isMobile ? -100 : 0])
+  const rightY = useTransform(scrollYProgress, [0.35, 0.78], [0, isMobile ? 100 : 0])
+  const leftRotate = useTransform(scrollYProgress, [0.35, 0.78], [0, isMobile ? -2 : -4])
+  const rightRotate = useTransform(scrollYProgress, [0.35, 0.78], [0, isMobile ? 2 : 4])
 
   return (
   <motion.section
@@ -35,7 +47,7 @@ const ConversionCTA = () => {
     <motion.div className="ticket-cta mx-auto grid max-w-7xl lg:grid-cols-[1.2fr_0.8fr]">
       <motion.div
         className="ticket-main rounded-3xl bg-gray-900 p-7 sm:p-10 lg:rounded-r-none lg:p-14"
-        style={{ x: leftX, rotate: leftRotate }}
+        style={{ x: leftX, y: leftY, rotate: leftRotate }}
         variants={{ hidden: { opacity: 0, x: -35 }, visible: { opacity: 1, x: 0 } }}
         transition={{ duration: 0.55, ease: 'easeOut' }}
       >
@@ -64,7 +76,7 @@ const ConversionCTA = () => {
 
       <motion.div
         className="ticket-owner rounded-3xl border-t border-white/10 bg-yellow-400 p-7 sm:p-10 lg:rounded-l-none lg:border-l lg:border-t-0 lg:p-14"
-        style={{ x: rightX, rotate: rightRotate }}
+        style={{ x: rightX, y: rightY, rotate: rightRotate }}
         variants={{ hidden: { opacity: 0, x: 35 }, visible: { opacity: 1, x: 0 } }}
         transition={{ duration: 0.55, ease: 'easeOut' }}
       >
