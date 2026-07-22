@@ -56,6 +56,22 @@ const structuredData = {
       publisher: { '@id': 'https://www.pgbee.in/#organization' },
     },
     {
+      '@type': 'WebApplication',
+      '@id': 'https://app.pgbee.in/#webapplication',
+      name: 'PgBee Student Stay Search',
+      description: 'Search and compare PGs, hostels and rooms near your college with PgBee.',
+      url: 'https://app.pgbee.in/search',
+      applicationCategory: 'LifestyleApplication',
+      operatingSystem: 'Web browser',
+      browserRequirements: 'Requires a modern web browser with JavaScript enabled.',
+      featureList: [
+        'Search student PGs and hostels',
+        'Compare prices and amenities',
+        'Review available rooms and beds',
+      ],
+      provider: { '@id': 'https://www.pgbee.in/#organization' },
+    },
+    {
       '@type': 'FAQPage',
       mainEntity: faqQuestions.map(({ question, answer }) => ({
         '@type': 'Question',

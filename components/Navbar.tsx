@@ -117,7 +117,7 @@ const Navbar = () => {
           ))}
           <AnimatedButton
             text="Find a Stay"
-            href="https://app.pgbee.in"
+            href="https://app.pgbee.in/search"
             target="_blank"
             className={`px-6 xl:px-8 py-2.5 xl:py-3 ${
               isScrolled
@@ -149,7 +149,7 @@ const Navbar = () => {
             <ListItem disablePadding sx={{ mt: 3, display: 'block' }}>
               <AnimatedButton
                 text="Find a Stay"
-                href="https://app.pgbee.in"
+                href="https://app.pgbee.in/search"
                 target="_blank"
                 className="w-full py-4 bg-white hover:bg-gray-100 text-black font-bold text-lg rounded-xl shadow-none transition-colors duration-300"
               />

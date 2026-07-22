@@ -70,7 +70,7 @@ const Footer = () => {
               <Link href="/#work" className="block text-gray-600 hover:text-yellow-500 hover:translate-x-1 transition-all duration-200">How it Works</Link>
               <Link href="/#contact" className="block text-gray-600 hover:text-yellow-500 hover:translate-x-1 transition-all duration-200">Contact</Link>
               <Link href="/#faq" className="block text-gray-600 hover:text-yellow-500 hover:translate-x-1 transition-all duration-200">FAQs</Link>
-              <a href="https://app.pgbee.in" target="_blank" rel="noopener noreferrer" className="block text-gray-600 hover:text-yellow-500 hover:translate-x-1 transition-all duration-200">Search Properties</a>
+          <a href="https://app.pgbee.in/search" target="_blank" rel="noopener noreferrer" className="block text-gray-600 hover:text-yellow-500 hover:translate-x-1 transition-all duration-200">Search Properties</a>
             </div>
           </div>
 

@@ -34,7 +34,7 @@ const Home = () => {
             <div className='flex max-w-2xl flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4 lg:flex-nowrap'>
               <AnimatedButton
                 text="Find a Stay"
-                href="https://app.pgbee.in"
+                href="https://app.pgbee.in/search"
                 className="w-full sm:w-auto sm:min-w-[170px] px-7 sm:px-8 py-3.5 sm:py-4 bg-white hover:bg-gray-100 text-black font-bold text-base sm:text-lg rounded-full shadow-none cursor-pointer"
                 icon={
                   <svg className="w-6 h-6 text-black" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

@@ -61,7 +61,7 @@ const ConversionCTA = () => {
         <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
           <AnimatedButton
             text="Find a Stay"
-            href="https://app.pgbee.in"
+            href="https://app.pgbee.in/search"
             target="_blank"
             className="w-full rounded-full bg-white px-7 py-3.5 font-bold text-gray-900 border border-white/30 hover:bg-yellow-300 sm:w-auto"
           />
