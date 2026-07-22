@@ -1,10 +1,12 @@
+import type { Metadata } from 'next'
 import React from 'react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Privacy Policy - PgBee',
   description: 'Privacy Policy for PgBee. Learn how we collect, use, and protect your data.',
+  alternates: { canonical: '/privacy' },
 }
 
 const PrivacyPolicy = () => {

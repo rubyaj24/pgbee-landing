@@ -5,6 +5,7 @@ import Footer from '@/components/Footer'
 export const metadata: Metadata = {
   title: 'Terms & Conditions | PgBee',
   description: 'Terms and conditions for using PgBee services.',
+  alternates: { canonical: '/terms' },
 }
 
 const sections = [

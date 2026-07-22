@@ -5,6 +5,7 @@ import Footer from '@/components/Footer'
 export const metadata: Metadata = {
   title: 'Refund Policy | PgBee',
   description: 'Refund and cancellation information for PgBee bookings and services.',
+  alternates: { canonical: '/refund-policy' },
 }
 
 const sections = [
